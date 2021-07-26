@@ -1,0 +1,284 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .example::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body {
+    font-family: "Garamond", serif;
+    background-color: #ADD8E6;
+  }
+  nav {
+    background: linear-gradient(to right, #008B8B, #5F9EA0);
+    height: 100px;
+    width: 100%;
+  }
+  img {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+  }
+  
+  label{
+    color: white;
+    font-size: 60px;
+    padding-left: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "OptimusPrinceps";
+  }
+  nav ul {
+    float: right;
+    margin-right: 40px;
+    margin-top: 10px;
+  }
+  nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a {
+    color: white;
+    font-size: 18px;
+    padding: 7px 10px;
+    text-shadow: 2px 2px 5px rgb(95, 95, 95);
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  /* a.active {
+  
+    } */
+  a:hover {
+    background: white;
+    color: #ffb923;
+    transition: 0.5s;
+  }
+  .checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check {
+    display: none;
+  }
+  @media (max-width: 952px) {
+    /* label.logo {
+      font-size: 30px;
+      padding-left: 50px;
+    }*/
+    nav ul li a {
+      font-size: 16px;
+    }
+  }
+  .imgcontainer {
+    padding: 5px;
+    position: relative;
+    height: 50px;
+  }
+  
+  .imgcontainer img {
+    width: 600px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-left: 200px;
+  }
+  form {
+    border: 3px solid #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgb(38, 38, 38);
+    width: 75%;
+    height: auto;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+  }
+  
+  form.dbg {
+    background-color: white;
+  }
+  h1 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .wrapper {
+    width: auto;
+    height: 350px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px #c4c4c4;
+    border-radius: 5px;
+  }
+  
+  .wrapper .input-data {
+    height: 40px;
+    width: 100%;
+    padding-bottom: 12px;
+    position: relative;
+  }
+  
+  .wrapper .input-data input {
+    height: 100%;
+    width: 94%;
+    padding-top: 5%;
+    padding-left: 5%;
+    border: none;
+    font-size: 15px;
+    position: relative;
+  }
+  
+  .input-data input:focus ~ label,
+  .input-data input:valid ~ label {
+    transform: translateY(-20px);
+    font-size: 12px;
+    padding-left: 5px;
+    color: #ff3737;
+  }
+  
+  .wrapper .input-data label {
+    font-size: 13px;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: grey;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .wrapper .input-data .underline {
+    position: absolute;
+    bottom: 0px;
+    height: 2px;
+    width: 97%;
+    margin-left: 4px;
+    margin-right: 4px;
+    background: orange;
+  }
+  
+  .input-data .underline:before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: pink;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before {
+    transform: scaleX(1);
+  }
+
+  .container {
+    padding: 30px;
+    position: relative;
+    margin: auto;
+  }
+  .topnav{
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+.topnav .search-container{
+    float: right;
+}
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.button{
+    background-color: #deb887;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button1 { width: 200px; }
+.button2 { width: 200px; }
+.buttonExport { width: auto; }
+.buttonFilter {width: auto;}
+
+table{
+    border-collapse: collapse;
+    width: 100%
+}
+* { box-sizing: border-box; }
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+}
+#myTable tr {
+    border-bottom: 1px solid #ddd;
+}
+#myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
