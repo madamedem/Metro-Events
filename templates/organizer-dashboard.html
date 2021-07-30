@@ -1,3 +1,4 @@
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,20 +15,20 @@
     <title>METRO EVENTS - Discover New Events</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-plot-listing.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
 
     <!-- DB -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-style.css' %}">
 
   </head>
 
@@ -53,15 +54,15 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="../templates/general-home.html" class="logo">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="organizerdb.html" class="active">Dashboard</a></li>
-              <li><a href="organizerevents.html">Events</a></li>
-              <li><a href="organizerreview.html">Reviews</a></li> 
-              <li><a href="organizerprofile.html">Profile</a></li>
+              <li><a href="../templates/organizer-dashboard.html" class="active">Dashboard</a></li>
+              <li><a href="../templates/general-events.html">Events</a></li>
+              <li><a href="../templates/">Reviews</a></li> 
+              <li><a href="../templates/organizer-profile.html">Profile</a></li>
               <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i>LOGOUT</a></div></li> 
             </ul>      
             <a class='menu-trigger'>
@@ -276,7 +277,7 @@
                         <h2 class="tm-block-title">Reviews</h2>
                         <div class="tm-notification-items">
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-01.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Jessica</b> and <b>6 others</b> sent you new <a href="#"
                                             class="tm-notification-link">product updates</a>. Check new orders.</p>
@@ -284,7 +285,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-02.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Oliver Too</b> and <b>6 others</b> sent you existing <a href="#"
                                             class="tm-notification-link">product updates</a>. Read more reports.</p>
@@ -292,7 +293,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-03.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Victoria</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">order updates</a>. Read order information.</p>
@@ -300,7 +301,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-01.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Laura Cute</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">product records</a>.</p>
@@ -308,7 +309,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-02.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Samantha</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">order stuffs</a>.</p>
@@ -316,7 +317,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-03.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Sophie</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">product updates</a>.</p>
@@ -324,7 +325,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-01.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-01.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Lily A</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">product updates</a>.</p>
@@ -332,7 +333,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-02.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-02.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Amara</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">product updates</a>.</p>
@@ -340,7 +341,7 @@
                                 </div>
                             </div>
                             <div class="media tm-notification-item">
-                                <div class="tm-gray-circle"><img src="img/notification-03.jpg" alt="Avatar Image" class="rounded-circle"></div>
+                                <div class="tm-gray-circle"><img src="{% static 'assets/css/images/notification-03.jpg' %}" alt="Avatar Image" class="rounded-circle"></div>
                                 <div class="media-body">
                                     <p class="mb-2"><b>Cinthela</b> and <b>6 others</b> sent you <a href="#"
                                             class="tm-notification-link">product updates</a>.</p>
@@ -373,23 +374,23 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
 
   <!-- db script -->
-  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/moment.min.js"></script>
+    <script src="{% static 'assets/js/moment.min.js' %}"></script>
     <!-- https://momentjs.com/ -->
-    <script src="js/Chart.min.js"></script>
+    <script src="{% static 'assets/js/Chart.min.js' %}"></script>
     <!-- http://www.chartjs.org/docs/latest/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
     <!-- https://getbootstrap.com/ -->
-    <script src="js/tooplate-scripts.js"></script>
+    <script src="{% static 'assets/js/tooplate-scripts.js' %}"></script>
     <script>
         Chart.defaults.global.defaultFontColor = 'white';
         let ctxLine,

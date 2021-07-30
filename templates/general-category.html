@@ -1,3 +1,4 @@
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,14 +15,14 @@
     <title>METRO EVENTS - Discover New Events</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-plot-listing.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
 
   </head>
 
@@ -47,15 +48,15 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="../templates/general-home.html" class="logo">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="home.html" >Home</a></li>
-              <li><a href="category.html" class="active">Category</a></li>
-              <li><a href="events.html">Events</a></li>
-              <li><a href="about.html">About Metro Events</a></li> 
+              <li><a href="../templates/general-home.html" >Home</a></li>
+              <li><a href="../templates/general-category.html" class="active">Category</a></li>
+              <li><a href="../templates/general-events.html">Events</a></li>
+              <li><a href="../templates/general-about.html">About Metro Events</a></li> 
               <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Book an Event</a></div></li> 
             </ul>      
             <a class='menu-trigger'>
@@ -95,27 +96,27 @@
                   <div class="menu">
                     <div class="first-thumb active">
                       <div class="thumb">
-                        <span class="icon"><img src="assets/images/search-icon-01.png" alt=""><h4>Apartments</h4></span>    
+                        <span class="icon"><img src="{% static 'assets/images/search-icon-01.png' %}" alt=""><h4>Apartments</h4></span>    
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-02.png" alt=""><h4>Food &amp; Life</h4></span>
+                        <span class="icon"><img src="{% static 'assets/images/search-icon-02.png' %}" alt=""><h4>Food &amp; Life</h4></span>
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-03.png" alt=""><h4>Cars</h4></span>
+                        <span class="icon"><img src="{% static 'assets/images/search-icon-03.png' %}" alt=""><h4>Cars</h4></span>
                       </div>
                     </div>
                     <div>
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-04.png" alt=""><h4>Shopping</h4></span>
+                        <span class="icon"><img src="{% static 'assets/images/search-icon-04.png' %}" alt=""><h4>Shopping</h4></span>
                       </div>
                     </div>
                     <div class="last-thumb">
                       <div class="thumb">                 
-                        <span class="icon"><img src="assets/images/search-icon-05.png" alt=""><h4>Traveling</h4></span>
+                        <span class="icon"><img src="{% static 'assets/images/search-icon-05.png' %}" alt=""><h4>Traveling</h4></span>
                       </div>
                     </div>
                   </div>
@@ -131,7 +132,7 @@
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-01.png" alt=""><h4>Apartments</h4></span> 
+                                      <span class="icon"><img src="{% static 'assets/images/search-icon-01.png' %}" alt=""><h4>Apartments</h4></span> 
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -151,7 +152,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="{% static 'assets/images/listing-icon-heading.png' %}" alt=""> Total Listings</h4>
                                     </div>
                                     <span class="list-item">This Week: 200 Listings &amp; 150 Sales<br>This Month: 1,800 Listings &amp; 1,560 Sales<br>This Year: 16,000 Listings &amp; 14,000 Sales</span>
                                   </div>
@@ -184,7 +185,7 @@
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-02.png" alt=""><h4>Food &amp; Life</h4></span> 
+                                      <span class="icon"><img src="{% static 'assets/images/search-icon-02.png' %}" alt=""><h4>Food &amp; Life</h4></span> 
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -207,7 +208,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="{% static 'assets/images/listing-icon-heading.png' %}" alt=""> Total Listings</h4>
                                     </div>
                                     <span class="list-item">This Week: 124 Listings &amp; 84 Sales<br>This Month: 1,040 Listings &amp; 720 Sales<br>This Year: 10,640 Listings &amp; 9,600 Sales</span>
                                   </div>
@@ -240,7 +241,7 @@
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-03.png" alt=""><h4>Cars</h4></span> 
+                                      <span class="icon"><img src="{% static 'assets/images/search-icon-03.png' %}" alt=""><h4>Cars</h4></span> 
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -260,7 +261,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="{% static 'assets/images/listing-icon-heading.png' %}" alt=""> Total Listings</h4>
                                     </div>
                                     <span class="list-item">This Week: 800 Listings &amp; 400 Sales<br>This Month: 1,600 Listings &amp; 1,200 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
                                   </div>
@@ -293,7 +294,7 @@
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-04.png" alt=""><h4>Shopping</h4></span> 
+                                      <span class="icon"><img src="{% static 'assets/images/search-icon-04.png' %}" alt=""><h4>Shopping</h4></span> 
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -313,7 +314,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="{% static 'assets/images/listing-icon-heading.png' %}" alt=""> Total Listings</h4>
                                     </div>
                                     <span class="list-item">This Week: 150 Listings &amp; 140 Sales<br>This Month: 1,500 Listings &amp; 1,100 Sales<br>This Year: 15,000 Listings &amp; 14,000 Sales</span>
                                   </div>
@@ -346,7 +347,7 @@
                                 <div class="row">
                                   <div class="col-lg-6">
                                     <div class="top-icon">
-                                      <span class="icon"><img src="assets/images/search-icon-05.png" alt=""><h4>Traveling</h4></span> 
+                                      <span class="icon"><img src="{% static 'assets/images/search-icon-05.png' %}" alt=""><h4>Traveling</h4></span> 
                                     </div>
                                   </div>
                                   <div class="col-lg-6">
@@ -366,7 +367,7 @@
                                   </div>
                                   <div class="col-lg-3">
                                     <div class="text-icon">
-                                      <h4><img src="assets/images/listing-icon-heading.png" alt=""> Total Listings</h4>
+                                      <h4><img src="{% static 'assets/images/listing-icon-heading.png' %}" alt=""> Total Listings</h4>
                                     </div>
                                     <span class="list-item">This Week: 200 Listings &amp; 120 Sales<br>This Month: 1,400 Listings &amp; 900 Sales<br>This Year: 14,000 Listings &amp; 12,000 Sales</span>
                                   </div>
@@ -407,7 +408,7 @@
         <div class="col-lg-7">
           <div class="about">
             <div class="logo">
-              <img src="assets/images/metro-logo-01.png" width="500px">
+              <img src="{% static 'assets/images/metro-logo-01.png' %}" width="500px">
             </div>
             <p>Metro Events is an application designed to help everyone organize and join events. The idea is to have a way people
             connect to each other publicly. No invitations needed. This app contains 3 users: user, organizer, administrator. </p>
@@ -439,12 +440,12 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 

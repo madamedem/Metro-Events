@@ -1,3 +1,4 @@
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,13 +14,13 @@
     <title>METRO EVENTS - Discover New Events</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-plot-listing.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-plot-listing.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
 <!--
 
 -->
@@ -46,15 +47,15 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo">
+            <a href="../templates/general-home.html" class="logo">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="index.html" class="active">Home</a></li>
-              <li><a href="category.html">Category</a></li>
-              <li><a href="listing.html">Events</a></li>
-              <li><a href="contact.html">About Metro Events</a></li> 
+              <li><a href="../templates/general-home.html" class="active">Home</a></li>
+              <li><a href="../templates/general-category.html">Category</a></li>
+              <li><a href="../templates/general-events.html">Events</a></li>
+              <li><a href="../templates/general-about.html">About Metro Events</a></li> 
               <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i> Book an Event</a></div></li> 
             </ul>        
             <a class='menu-trigger'>
@@ -98,11 +99,11 @@
         </center>
         <div class="col-lg-10 offset-lg-1">
           <ul class="categories">
-            <li><a href="category.html"><span class="icon"><img src="assets/images/search-icon-01.png" alt="Home"></span>Conference</a></li>
-            <li><a href="listing.html"><span class="icon"><img src="assets/images/search-icon-02.png" alt="Food"></span>Lifestyle Event</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-03.png" alt="Vehicle"></span>Shows and Expos</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-04.png" alt="Shopping"></span>VIP Experience</a></li>
-            <li><a href="#"><span class="icon"><img src="assets/images/search-icon-05.png" alt="Travel"></span>World Events</a></li>
+            <li><a href="../templates/general-category.html"><span class="icon"><img src="{% static 'assets/images/search-icon-01.png' %}" alt="Home"></span>Conference</a></li>
+            <li><a href="../templates/general-events.html"><span class="icon"><img src="{% static 'assets/images/search-icon-02.png' %}" alt="Food"></span>Lifestyle Event</a></li>
+            <li><a href="#"><span class="icon"><img src="{% static 'assets/images/search-icon-03.png' %}" alt="Vehicle"></span>Shows and Expos</a></li>
+            <li><a href="#"><span class="icon"><img src="{% static 'assets/images/search-icon-04.png' %}" alt="Shopping"></span>VIP Experience</a></li>
+            <li><a href="#"><span class="icon"><img src="{% static 'assets/images/search-icon-05.png' %}" alt="Travel"></span>World Events</a></li>
           </ul>
         </div>
       </div>
@@ -118,7 +119,7 @@
         <div class="col-lg-7">
           <div class="about">
             <div class="logo">
-              <img src="assets/images/metro-logo-01.png" width="500px">
+              <img src="{% static 'assets/images/metro-logo-01.png' %}" width="500px">
             </div>
             <p>Metro Events is an application designed to help everyone organize and join events. The idea is to have a way people
             connect to each other publicly. No invitations needed. This app contains 3 users: user, organizer, administrator. </p>
@@ -151,12 +152,12 @@
 
 
   <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 
