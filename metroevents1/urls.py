@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('organizer/', include('organizer.urls', namespace='organizer')),
+    path('home/', include('home.urls', namespace='home')),
     
     
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
