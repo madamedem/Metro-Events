@@ -5,30 +5,31 @@ from django.urls import reverse
 from django.views.generic import View
 from django.contrib import messages
 
-
-
 # Create your views here.
 
-class organizerHomeView(View):
-    template_name="organizer-dashboard.html"
+class generalHomeView(View):
+    template_name="general-home.html"
 
     def get(self,request):
         return render(request,self.template_name)
 
-class organizerEventsView(View):
-    template_name="organizer-events.html"
-
-    def get(self,request):
-        return render(request,self.template_name)
-        
-class organizerProfileView(View):
-    template_name="organizer-profile.html"
+class generalEventsView(View):
+    template_name="general-events.html"
 
     def get(self,request):
         return render(request,self.template_name)
 
-class organizerReviewView(View):
-    template_name="organizer-review.html"
+
+class generalCategoryView(View):
+    template_name="general-category.html"
 
     def get(self,request):
         return render(request,self.template_name)
+
+
+class generalAboutView(View):
+    template_name="general-about.html"
+
+    def get(self,request):
+        return render(request,self.template_name)
+
