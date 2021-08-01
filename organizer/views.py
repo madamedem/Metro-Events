@@ -22,7 +22,6 @@ class organizerLoginView(View):
         return render(request, self.template_name, {'formLogin': formLogin})
 
     def post(self, request):
-        formLogin = LoginForm(request.POST)
         username = request.POST.get('username')
         password = request.POST.get('password')
         print("Username:" + username)
@@ -35,13 +34,11 @@ class organizerLoginView(View):
             if account.password == password:
                 print("username" + username)
 
-                return redirect(reverse('organizer:organizer_home', kwargs={'username': username, }))
+                return redirect('organizer:organizer_account', kwargs={'username': username, })
             else:
                 error = "Incorrect password."
         else:
             error = "Username does not exist."
-
-        return render(request, self.template_name, {'formLogin': formLogin, 'error': error})
 
 class organizerHomeView(View):
     template_name="organizer-dashboard.html"
@@ -50,7 +47,7 @@ class organizerHomeView(View):
         return render(request,self.template_name)      
 
  
-class organizerloggedInView(View):
+class organizerLoggedInView(View):
     template_name = "organizer-dashboard.html"
 
     def get(self, request, username):
