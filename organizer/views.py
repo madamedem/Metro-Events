@@ -7,50 +7,56 @@ from django.contrib import messages
 from django.contrib.auth.models import auth
 from django.contrib.auth import login, logout
 
-from .forms import OrganizerForm, LoginForm
+from .forms import OrganizerForm, LoginForm, AccountForm
 from .models import Account, Organizer
 
 
 
 # Create your views here.
 
+class organizerHomeView(View):
+    template_name="organizer-dashboard.html"
+
+    def get(self,request):
+        return render(request,self.template_name)
+
 class organizerLoginView(View):
     template_name="organizer-login.html"
 
     def get(self,request):
-        formLogin = LoginForm()
-        return render(request, self.template_name, {'formLogin': formLogin})
+        form = LoginForm()
+        return render(request, self.template_name, {'form': form})
 
     def post(self, request):
-        formLogin = LoginForm(request.POST)
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        print("Username:" + username)
+        form = LoginForm(request.POST)
+        uname = request.POST.get('username')
+        pwd = request.POST.get('password')
+        print("Username:" + uname)
         error = ""
-        print("No of record:" + str(Account.objects.filter(pk=username).count()))
+        print("No of record:" + str(Account.objects.filter(pk=uname).count()))
         
 
-        if Account.objects.filter(pk=username).count() != 0:
-            account = Account.objects.get(pk=username)
-            if account.password == password:
-                print("username" + username)
+        if Account.objects.filter(pk=uname).count() != 0:
+            account = Account.objects.get(pk=uname)
+            if account.password == pwd:
+                print("username" + uname)
 
-                return redirect(reverse('organizer:organizer_account', kwargs={'username': username, }))
+                return redirect(reverse('organizer:organizer_homeaccount', kwargs={'uname': uname, }))
             else:
                 error = "Incorrect password."
         else:
             error = "Username does not exist."
 
-        return render(request, self.template_name, {'formLogin': formLogin, 'error': error}) 
+        return render(request, self.template_name, {'form': form, 'error': error}) 
 
  
 class organizerLoggedInView(View):
     template_name = "organizer-dashboard.html"
 
-    def get(self, request, username):
+    def get(self, request, uname):
 
-        print(username)
-        return render(request, self.template_name, {'username': username})
+        print(uname)
+        return render(request, self.template_name, {'uname': uname})
 
 
 
