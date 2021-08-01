@@ -15,6 +15,12 @@ class organizerHomeView(View):
     def get(self,request):
         return render(request,self.template_name)
 
+class organizerLoginView(View):
+    template_name="organizer-login.html"
+
+    def get(self,request):
+        return render(request,self.template_name)
+
 class organizerEventsView(View):
     template_name="organizer-events.html"
 
