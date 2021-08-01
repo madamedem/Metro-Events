@@ -9,5 +9,5 @@ urlpatterns = [
     path('organizerReview', views.organizerReviewView.as_view(), name='organizer_review'),
     path('organizerProfile', views.organizerProfileView.as_view(), name='organizer_profile'),
     path('organizerLogin', views.organizerLoginView.as_view(), name='organizer_login'),
-
+    path('organizerHome/<uname>', views.organizerHomeView.as_view(), name="organizer_account"),
 ]
