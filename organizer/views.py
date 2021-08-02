@@ -29,12 +29,35 @@ class organizerEventsView(View):
         return render(request,self.template_name)
 
 class organizerEventsAddView(View):
-    template_name="organizer-eventsAdd.html"
 
     def get(self,request):
         formEvent = EventCreationForm()
-        return render(request,self.template_name, {'formEvent': formEvent})
+        return render(request, 'organizer-eventsAdd.html', {'formEvent': formEvent})
         
+    def post(self,request):
+        event_name = request.POST.get('event_name')
+        event_description = request.POST.get('event_description')
+        event_type = request.POST.get('event_type')
+        start_date = request.POST.get('start_date')
+        end_date = request.POST.get('end_date')
+        start_time = request.POST.get('start_time')
+        end_time = request.POST.get('end_time')
+
+        print(event_name)
+        print(event_description)
+        print(event_type)
+        print(start_date)
+        print(end_date)
+        print(start_time)
+        print(end_time)
+
+        event = Event(event_name=event_name, event_description=event_description, 
+                event_type=event_type, start_date=start_date, end_date=end_date,
+                 )
+        event.save()
+
+        return render(request, self.template_name, {'event': event})
+
 class organizerProfileView(View):
     template_name="organizer-profile.html"
 
