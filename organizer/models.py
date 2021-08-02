@@ -7,20 +7,23 @@ class Review(models.Model):
 	content = models.CharField(max_length=255)
 	rating = models.FloatField(default = 0)
 
-class Event(models.Model):
-    event_name = models.CharField(max_length=50)
-event_description = models.CharField(max_length=50)
-event_type = models.CharField(max_length=50)
-start_date = models.DateField(default = datetime.now)
-end_date = models.DateField(default = datetime.now)
-start_time = models.TimeField(default = timezone.now)
-end_time = models.TimeField(default = timezone.now)
-isCanceled = models.BooleanField(default = False)
-isDeleted = models.BooleanField(default = False)
-isFinished = models.BooleanField(default = False)
+	class Meta:
+		db_table = "review"
 
-class Meta:
-	db_table = "event"
+class Event(models.Model):
+	event_name = models.CharField(max_length=50)
+	event_description = models.CharField(max_length=50)
+	event_type = models.CharField(max_length=50)
+	start_date = models.DateField(default = datetime.now)
+	end_date = models.DateField(default = datetime.now)
+	start_time = models.TimeField(default = timezone.now)
+	end_time = models.TimeField(default = timezone.now)
+	isCanceled = models.BooleanField(default = False)
+	isDeleted = models.BooleanField(default = False)
+	isFinished = models.BooleanField(default = False)
+
+	class Meta:
+		db_table = "event"
 
 
 class EventRequest(models.Model):
