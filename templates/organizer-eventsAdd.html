@@ -1,0 +1,241 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>METRO EVENTS - Discover New Events</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-plot-listing.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+
+    <!-- events css -->
+    <link rel="stylesheet" href="{% static 'https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/templatemo-style.css' %}">
+
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../organizer/organizerHome" class="logo">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="../organizer/organizerHome" >Dashboard</a></li>
+              <li><a href="../organizer/organizerEvents" class="active">Events</a></li>
+              <li><a href="../organizer/organizerReview">Reviews</a></li> 
+              <li><a href="../organizer/organizerProfile">Profile</a></li>
+              <li><div class="main-white-button"><a href="#"><i class="fa fa-plus"></i>LOGOUT</a></div></li> 
+            </ul>      
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading-02">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-15">
+          <div class="top-text header-text"><br>
+            <h2 style="color:white;">REVIEWS</h2>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="pos-rel">
+          <!-- Nav pills -->
+          <ul class="nav nav-pills justify-content-center nav-justified" role="tablist">
+             <li class="nav-item">
+                <a class="nav-link active btn btn-primary" data-toggle="pill" href="#organizer-details">Organizer Details</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link btn btn-primary" data-toggle="pill" href="#event-details">Event Details</a>
+             </li>
+             <li class="nav-item">
+                <a class="nav-link btn btn-primary" data-toggle="pill" href="#confirm-details">Confirm Details</a>
+             </li>
+          </ul>
+          <div class="connected-line"></div>
+          <!-- Tab panes -->
+          <div class="tab-content">
+             <div id="organizer-details" class="container tab-pane active">
+               <form class="seminor-login-form">
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="contact-person">Contact Person</label>
+</div>
+<div class="form-group">
+  <input type="email" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="contact-email">Contact Email</label>
+</div>
+<div class="form-group">
+  <input type="email" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="alternative-email">Alternative Email</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="contact-number">Contact Number</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="alternative-number">Alternative Number</label>
+</div>
+<div class="form-group">
+  <label class="container-checkbox">
+  Iam the event organizer and responsible for the info provided.
+  <input type="checkbox" checked="checked" required>
+  <span class="checkmark-box"></span>
+  </label>
+  </div>
+  <div class="form-group">
+    <label class="container-checkbox">
+    Just posting an event that iam aware about this.
+    <input type="checkbox" checked="checked" required>
+    <span class="checkmark-box"></span>
+    </label>
+    </div>
+
+  <div class="btn-check-log">
+      <button type="submit" class="btn-check-login">LOGIN</button>
+  </div>
+</form>
+             </div>
+             <div id="event-details" class="container tab-pane fade">
+               <form class="seminor-login-form">
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="event-title">Event Title</label>
+</div>
+<div class="form-group">
+  <input type="datetime-local" max="3000-12-31" min="1000-01-01" placehoder="Event Start Date" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="event-start-date">Event Start Date</label>
+</div>
+<div class="form-group">
+  <input type="datetime-local" max="3000-12-31" min="1000-01-01" placehoder="Event End Date" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="event-end-date">Event End Date</label>
+</div>
+
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="last-date-registration">Last Date For Registration</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="venue-city">Venue City</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="venue-location">Venue Location</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="full-address">Full Address</label>
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" required autocomplete="off">
+  <label class="form-control-placeholder" for="Website">Website</label>
+</div>
+  <div class="btn-check-log">
+      <button type="submit" class="btn-check-login">LOGIN</button>
+  </div>
+</form>
+             </div>
+             <div id="confirm-details" class="container tab-pane fade">
+                <br>
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+             </div>
+          </div>
+       </div>
+       </div>
+    </div>
+ </div>
+	
+	
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="sub-footer">
+            <p>Copyright © 2021 METRO EVENTS All Rights Reserved.
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+  <script src="{% static 'assets/js/animation.js' %}"></script>
+  <script src="{% static 'assets/js/imagesloaded.js' %}"></script>
+  <script src="{% static 'assets/js/custom.js' %}"></script>
+
+  <!-- events script -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!-- https://getbootstrap.com/ -->
+    <script>
+      $(function() {
+        $(".tm-product-name").on("click", function() {
+          window.location.href = "edit-product.html";
+        });
+      });
+    </script>
+
+</body>
+
+</html>
