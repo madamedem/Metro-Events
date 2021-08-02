@@ -16,7 +16,7 @@ from .models import Account, Organizer
 
 # Create your views here.
 
-class organizerHomeView(View):
+class organizerIndexView(View):
     template_name="organizer-dashboard.html"
 
     def get(self,request):
@@ -42,11 +42,11 @@ class organizerLoginView(View):
 
             else:
                 messages.error(request,"Your account is unauthorized to log in.")
-                return redirect("organizer:organizer_login")   
+                return redirect("organizer:organizer_index")   
 
         else:
             messages.error(request, 'Invalid username or password.')
-            return redirect("organizer:organizer_login")
+            return redirect("organizer:organizer_index")
  
 class organizerLoggedInView(View):
     template_name = "organizer-dashboard.html"
