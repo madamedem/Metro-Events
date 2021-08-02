@@ -88,117 +88,79 @@
     </div>  
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="pos-rel">
-          <!-- Nav pills -->
-          <ul class="nav nav-pills justify-content-center nav-justified" role="tablist">
-             <li class="nav-item">
-                <a class="nav-link active btn btn-primary" data-toggle="pill" href="#organizer-details">Organizer Details</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link btn btn-primary" data-toggle="pill" href="#event-details">Event Details</a>
-             </li>
-             <li class="nav-item">
-                <a class="nav-link btn btn-primary" data-toggle="pill" href="#confirm-details">Confirm Details</a>
-             </li>
-          </ul>
-          <div class="connected-line"></div>
-          <!-- Tab panes -->
-          <div class="tab-content">
-             <div id="organizer-details" class="container tab-pane active">
-               <form class="seminor-login-form">
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="contact-person">Contact Person</label>
-</div>
-<div class="form-group">
-  <input type="email" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="contact-email">Contact Email</label>
-</div>
-<div class="form-group">
-  <input type="email" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="alternative-email">Alternative Email</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="contact-number">Contact Number</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="alternative-number">Alternative Number</label>
-</div>
-<div class="form-group">
-  <label class="container-checkbox">
-  Iam the event organizer and responsible for the info provided.
-  <input type="checkbox" checked="checked" required>
-  <span class="checkmark-box"></span>
-  </label>
-  </div>
-  <div class="form-group">
-    <label class="container-checkbox">
-    Just posting an event that iam aware about this.
-    <input type="checkbox" checked="checked" required>
-    <span class="checkmark-box"></span>
-    </label>
+  <form class="form-horizontal">
+    <fieldset>
+    
+    <!-- Form Name -->
+    <legend>Sign Up</legend>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Business Name">Business Name</label>  
+      <div class="col-md-4">
+      <input name="Business Name" class="form-control input-md" id="Business Name" required="" type="text" placeholder="Please enter your business">
+        
+      </div>
     </div>
-
-  <div class="btn-check-log">
-      <button type="submit" class="btn-check-login">LOGIN</button>
-  </div>
-</form>
-             </div>
-             <div id="event-details" class="container tab-pane fade">
-               <form class="seminor-login-form">
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="event-title">Event Title</label>
-</div>
-<div class="form-group">
-  <input type="datetime-local" max="3000-12-31" min="1000-01-01" placehoder="Event Start Date" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="event-start-date">Event Start Date</label>
-</div>
-<div class="form-group">
-  <input type="datetime-local" max="3000-12-31" min="1000-01-01" placehoder="Event End Date" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="event-end-date">Event End Date</label>
-</div>
-
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="last-date-registration">Last Date For Registration</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="venue-city">Venue City</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="venue-location">Venue Location</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="full-address">Full Address</label>
-</div>
-<div class="form-group">
-  <input type="text" class="form-control" required autocomplete="off">
-  <label class="form-control-placeholder" for="Website">Website</label>
-</div>
-  <div class="btn-check-log">
-      <button type="submit" class="btn-check-login">LOGIN</button>
-  </div>
-</form>
-             </div>
-             <div id="confirm-details" class="container tab-pane fade">
-                <br>
-                <h3>Menu 2</h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-             </div>
-          </div>
-       </div>
-       </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Email">Email Address</label>  
+      <div class="col-md-4">
+      <input name="Email" class="form-control input-md" id="Email" required="" type="text" placeholder="Please enter your email">
+        
+      </div>
     </div>
- </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Phone">Phone Number</label>  
+      <div class="col-md-4">
+      <input name="Phone" class="form-control input-md" id="Phone" type="text" placeholder="Please enter your number">
+        
+      </div>
+    </div>
+    
+    <!-- Multiple Checkboxes -->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="checkboxes">What services would you like?</label>
+      <div class="col-md-4">
+      <div class="checkbox">
+        <label for="checkboxes-0">
+          <input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
+          Communication Dashboard
+        </label>
+      </div>
+      <div class="checkbox">
+        <label for="checkboxes-1">
+          <input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
+          Website Design
+        </label>
+      </div>
+      <div class="checkbox">
+        <label for="checkboxes-2">
+          <input name="checkboxes" id="checkboxes-2" type="checkbox" value="3">
+          Basic Newsletters
+        </label>
+      </div>
+      <div class="checkbox">
+        <label for="checkboxes-3">
+          <input name="checkboxes" id="checkboxes-3" type="checkbox" value="4">
+          Premium Newsletters
+        </label>
+      </div>
+      </div>
+    </div>
+    
+    <!-- Text input-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="Referral">How did you hear about us?</label>  
+      <div class="col-md-4">
+      <input name="Referral" class="form-control input-md" id="Referral" type="text" placeholder="Let Us Know">
+        
+      </div>
+    </div>
+    
 	
 	
 
