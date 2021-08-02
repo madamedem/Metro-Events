@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('organizer/', include('organizer.urls', namespace='organizer')),
     path('home/', include('home.urls', namespace='home')),
+    path('admin1/', include('admin1.urls', namespace='admin1')),
     
     
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

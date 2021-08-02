@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <title>METRO EVENTS - Unsuccessful </title>
+        <title>METRO EVENTS - Success </title>
 
         <!-- Bootstrap core CSS -->
         <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -30,26 +30,25 @@
 
     </head>
     <body>
-        <div id="error-box">
+        <div id="success-box">
             <div class="dot"></div>
             <div class="dot two"></div>
-            <div class="face2">
-                <div class="eye"></div>
-                <div class="eye right"></div>
-                <div class="mouth sad"></div>
-            </div>
-            <div class="shadow move"></div>
-            <div class="message">
-                <h1 class="alert">OH NO!</h1>
-                <p>Can you give a reason on why you are declining this user to be an organizer?
-                    <br><br>
-                    <input type="text">
-                    <br><br>
-                    <input type="submit" value="Submit">
-                </p>
-            </div>
-            <br><br><br><br><br>
-            <button class="button-box"><h5 class="green"> <a href="../admin1/adminViewRequest">Thank you</a></h5></button>
+            <div class="face">
+            <div class="eye"></div>
+            <div class="eye right"></div>
+            <div class="mouth happy"></div>
         </div>
+        <div class="shadow scale"></div>
+        <div class="message">
+            <h1 class="alert">Congratulations!</h1>
+            <p>You have successfully accepted this user to be an organizer.
+                <br>
+                A notification is sent to the user  for the good news!
+                <br>
+                Have a nice day!
+            </p>
+        </div>
+        <br><br>
+        <button class="button-box"><h1 class="green"> <a href="../admin1/adminViewRequest">Thank you</a></h1></button>
     </body>
 </html>

@@ -204,6 +204,7 @@ button, .dot {
     transition: all .3s ease-in-out;
 }
 
+
 @keyframes bounce {
   50% {
      transform: translateY(-10px);
