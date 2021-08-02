@@ -19,14 +19,14 @@ class organizerIndexView(View):
     template_name="organizer-dashboard.html"
 
     def get(self,request):
-        return render(request,self.template_name)
+        return render(request,self.template_name, {})
 
 
 class organizerEventsView(View):
     template_name="organizer-events.html"
 
     def get(self,request):
-        return render(request,self.template_name)
+        return render(request,self.template_name, {})
 
 class organizerEventsAddView(View):
 
@@ -53,10 +53,11 @@ class organizerEventsAddView(View):
 
         event = Event(event_name=event_name, event_description=event_description, 
                 event_type=event_type, start_date=start_date, end_date=end_date,
+                start_time=start_time, end_time=end_time
                  )
         event.save()
 
-        return render(request, self.template_name, {'event': event})
+        return render(request, "organizer-dashboard.html", {'event': event})
 
 class organizerProfileView(View):
     template_name="organizer-profile.html"
