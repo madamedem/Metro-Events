@@ -81,86 +81,88 @@
       <div class="row">
         <div class="col-lg-15">
           <div class="top-text header-text"><br>
-            <h2 style="color:white;">REVIEWS</h2>
+            <h2 style="color:white;">EVENTS</h2>
+            <h6 style="color:white;">Welcome back, Vince!</h6><br>
           </div>
         </div>
       </div>
     </div>  
   </div>
 
-  <form class="form-horizontal">
-    <fieldset>
-    
-    <!-- Form Name -->
-    <legend>Sign Up</legend>
-    
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="Business Name">Business Name</label>  
-      <div class="col-md-4">
-      <input name="Business Name" class="form-control input-md" id="Business Name" required="" type="text" placeholder="Please enter your business">
-        
-      </div>
+  <br>
+
+
+  <main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header" style="background-color: #54657d; color: white ;">Add New Event</div>
+                        <div class="card-body">
+                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+                                <div class="form-group row">
+                                    <label for="full_name" style="color:black;"  class="col-md-4 col-form-label text-md-right">Event Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="full_name" class="form-control" name="full-name">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="email_address" class="col-md-4 col-form-label text-md-right">Event Description</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email_address" class="form-control" name="email-address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="user_name" class="col-md-4 col-form-label text-md-right">Event Type</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="user_name" class="form-control" name="username">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="phone_number" class="col-md-4 col-form-label text-md-right">Start Date</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="phone_number" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="present_address" class="col-md-4 col-form-label text-md-right">End Date</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="present_address" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="permanent_address" class="col-md-4 col-form-label text-md-right">Start Time</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="permanent_address" class="form-control" name="permanent-address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="nid_number" class="col-md-4 col-form-label text-md-right"><abbr
+                                                title="National Id Card"></abbr>End Time</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="nid_number" class="form-control" name="nid-number">
+                                    </div>
+                                </div>
+
+                                    <div class="col-md-6 offset-md-4">
+                                        <button type="submit" class="btn btn-primary">
+                                        Register
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </div>
-    
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="Email">Email Address</label>  
-      <div class="col-md-4">
-      <input name="Email" class="form-control input-md" id="Email" required="" type="text" placeholder="Please enter your email">
-        
-      </div>
-    </div>
-    
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="Phone">Phone Number</label>  
-      <div class="col-md-4">
-      <input name="Phone" class="form-control input-md" id="Phone" type="text" placeholder="Please enter your number">
-        
-      </div>
-    </div>
-    
-    <!-- Multiple Checkboxes -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="checkboxes">What services would you like?</label>
-      <div class="col-md-4">
-      <div class="checkbox">
-        <label for="checkboxes-0">
-          <input name="checkboxes" id="checkboxes-0" type="checkbox" value="1">
-          Communication Dashboard
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="checkboxes-1">
-          <input name="checkboxes" id="checkboxes-1" type="checkbox" value="2">
-          Website Design
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="checkboxes-2">
-          <input name="checkboxes" id="checkboxes-2" type="checkbox" value="3">
-          Basic Newsletters
-        </label>
-      </div>
-      <div class="checkbox">
-        <label for="checkboxes-3">
-          <input name="checkboxes" id="checkboxes-3" type="checkbox" value="4">
-          Premium Newsletters
-        </label>
-      </div>
-      </div>
-    </div>
-    
-    <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="Referral">How did you hear about us?</label>  
-      <div class="col-md-4">
-      <input name="Referral" class="form-control input-md" id="Referral" type="text" placeholder="Let Us Know">
-        
-      </div>
-    </div>
-    
+
 	
 	
 
