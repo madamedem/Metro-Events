@@ -1,5 +1,5 @@
 from django import forms
-from django.db.models import AutoField
+
 
 from .models import Account, Organizer
 
