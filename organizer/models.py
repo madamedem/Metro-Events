@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 
+
 class Review(models.Model):
 	title = models.CharField(max_length=50)
 	content = models.CharField(max_length=255)

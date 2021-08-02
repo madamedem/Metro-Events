@@ -32,8 +32,8 @@ class organizerEventsAddView(View):
     template_name="organizer-eventsAdd.html"
 
     def get(self,request):
-
-        return render(request,self.template_name)
+        formEvent = EventCreationForm()
+        return render(request,self.template_name, {'formEvent': formEvent})
         
 class organizerProfileView(View):
     template_name="organizer-profile.html"
