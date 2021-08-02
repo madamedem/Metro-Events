@@ -54,12 +54,12 @@
         <div class="col-12">
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
-            <a href="../organizer/organizerHome" class="logo">
+            <a href="../organizer/organizerIndex" class="logo">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li><a href="../organizer/organizerHome" class="active">Dashboard</a></li>
+              <li><a href="../organizer/organizerIndex" class="active">Dashboard</a></li>
               <li><a href="../organizer/organizerEvents">Events</a></li>
               <li><a href="../organizer/organizerReview">Reviews</a></li> 
               <li><a href="../organizer/organizerProfile">Profile</a></li>
@@ -85,6 +85,7 @@
             <h6 style="color:white;">Welcome back, Vince!</h6><br>
           </div>
           <div class="col-15 tm-block-col">
+            {% csrf_token %}
                     <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
                         <h2 class="tm-block-title">Events</h2>
                         <table class="table">
@@ -93,146 +94,25 @@
                                     <th scope="col">Event ID</th>
                                     <th scope="col">Event Status</th>
                                     <th scope="col">Event Name</th>
-                                    <th scope="col">Location</th>
-                                    <th scope="col">Number of Participants</th>
                                     <th scope="col">Start Date</th>
                                     <th scope="col">End Date</th>
+                                    <th scope="col">Start Time</th>
+                                    <th scope="col">End Time</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for b in booking %}
+                                {% for event in organizer_index %}
                                 <tr>
                                     <th scope="row"><b>#122349</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>CIT Triathlon</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>23</b></td>
-                                    <td>16:00, 12 NOV 2018</td>
-                                    <td>08:00, 18 NOV 2018</td>
+                                    <td><b>{{ event.event_name }}</b></td>
+                                    <td><b>{{ event.event_description}}</b></td>
+                                    <td><b>{{ event.event_type }}</b></td>
+                                    <td>{{ event.start_date }}</td>
+                                    <td>{{ event.end_date }}</td>
+                                    <td>{{ event.start_time }}</td>
+                                    <td>{{ event.end_time }}</td>
                                 </tr>
-                                <tr>
-                                    <th scope="row"><b>#122348</b></th>
-                                    <td>
-                                        <div class="tm-status-circle pending">
-                                        </div>Pending
-                                    </td>
-                                    <td><b>Run for CIT</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>45</b></td>
-                                    <td>11:00, 10 NOV 2018</td>
-                                    <td>04:00, 14 NOV 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122347</b></th>
-                                    <td>
-                                        <div class="tm-status-circle cancelled">
-                                        </div>Cancelled
-                                    </td>
-                                    <td><b>Wilson Memorial Event</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>79</b></td>
-                                    <td>12:00, 22 NOV 2018</td>
-                                    <td>06:00, 28 NOV 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122346</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>William's Exclusive Birthday</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>31/b></td>
-                                    <td>15:00, 10 NOV 2018</td>
-                                    <td>09:00, 14 NOV 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122345</b></th>
-                                    <td>
-                                        <div class="tm-status-circle pending">
-                                        </div>Pending
-                                    </td>
-                                    <td><b>CIT Concert</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>28</b></td>
-                                    <td>15:00, 11 NOV 2018</td>
-                                    <td>09:00, 17 NOV 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122344</b></th>
-                                    <td>
-                                        <div class="tm-status-circle pending">
-                                        </div>Pending
-                                    </td>
-                                    <td><b>How to train your dog Movie Showing</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>45</b></td>
-                                    <td>18:00, 12 OCT 2018</td>
-                                    <td>06:00, 18 OCT 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122343</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>Davis Paint Showcase</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>67</b></td>
-                                    <td>12:00, 10 OCT 2018</td>
-                                    <td>08:00, 18 OCT 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122342</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>The 2021 Oscars</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>42</b></td>
-                                    <td>15:30, 06 OCT 2018</td>
-                                    <td>09:30, 16 OCT 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122341</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>Charlie Brown Opening</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>30</b></td>
-                                    <td>11:00, 10 OCT 2018</td>
-                                    <td>03:00, 14 OCT 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122340</b></th>
-                                    <td>
-                                        <div class="tm-status-circle cancelled">
-                                        </div>Cancelled
-                                    </td>
-                                    <td><b>Wilson Cookies</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>218 km</b></td>
-                                    <td>17:30, 12 OCT 2018</td>
-                                    <td>08:30, 22 OCT 2018</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><b>#122339</b></th>
-                                    <td>
-                                        <div class="tm-status-circle moving">
-                                        </div>Moving
-                                    </td>
-                                    <td><b>Richard Clamon</b></td>
-                                    <td><b>London, UK</b></td>
-                                    <td><b>150 km</b></td>
-                                    <td>15:00, 12 OCT 2018</td>
-                                    <td>09:20, 26 OCT 2018</td>
-                                </tr>
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
