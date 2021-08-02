@@ -9,7 +9,8 @@ from django.contrib import messages
 from django.contrib.auth.models import auth
 from django.contrib.auth import login, logout
 
-
+from .forms import *
+from .models import *
 
 
 # Create your views here.
@@ -31,6 +32,7 @@ class organizerEventsAddView(View):
     template_name="organizer-eventsAdd.html"
 
     def get(self,request):
+
         return render(request,self.template_name)
         
 class organizerProfileView(View):

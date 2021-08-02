@@ -2,7 +2,10 @@ from django.db import models
 from datetime import datetime
 from django.utils import timezone
 
-
+class Review(models.Model):
+	title = models.CharField(max_length=50)
+	content = models.CharField(max_length=255)
+	rating = models.FloatField(default = 0)
 
 class Event(models.Model):
     event_name = models.CharField(max_length=50)
