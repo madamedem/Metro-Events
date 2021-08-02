@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic import View
 from django.contrib import messages
+
+
 from django.contrib.auth.models import auth
 from django.contrib.auth import login, logout
 
@@ -21,34 +23,30 @@ class organizerHomeView(View):
         return render(request,self.template_name)
 
 class organizerLoginView(View):
-    template_name="organizer-login.html"
 
     def get(self,request):
-        form = LoginForm()
-        return render(request, self.template_name, {'form': form})
+        return render(request, 'organizer-login.html')
 
     def post(self, request):
-        form = LoginForm(request.POST)
-        uname = request.POST.get('username')
-        pwd = request.POST.get('password')
-        print("Username:" + uname)
-        error = ""
-        print("No of record:" + str(Account.objects.filter(pk=uname).count()))
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = auth.authenticate(username=username, password=password)
         
 
-        if Account.objects.filter(pk=uname).count() != 0:
-            account = Account.objects.get(pk=uname)
-            if account.password == pwd:
-                print("username" + uname)
+        if user is not None:
+            auth.login(request, user)
+            is_organizer = Organizer.objects.filter(user_id=request.user.id)
 
-                return redirect(reverse('organizer:organizer_homeaccount', kwargs={'uname': uname, }))
+            if is_organizer:
+                return redirect('organizer:organizer_homepage')
+
             else:
-                error = "Incorrect password."
+                messages.error(request,"Your account is unauthorized to log in.")
+                return redirect("organizer:organizer_login")   
+
         else:
-            error = "Username does not exist."
-
-        return render(request, self.template_name, {'form': form, 'error': error}) 
-
+            messages.error(request, 'Invalid username or password.')
+            return redirect("organizer:organizer_login")
  
 class organizerLoggedInView(View):
     template_name = "organizer-dashboard.html"
