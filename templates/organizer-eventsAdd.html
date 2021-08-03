@@ -99,7 +99,7 @@
                     <div class="card">
                         <div class="card-header" style="background-color: #54657d; color: white ;">Add New Event</div>
                         <div class="card-body">
-                            <form name="my-form" onsubmit="return validform()" action="success.php" method="">
+                            <form name="my-form" action=""  method="POST">
                               {% csrf_token %}  
                               <div  class="form-group row">
                                     <label for="full_name" style="color:black;"  class="col-md-3 col-form-label text-md-right">Event Name</label>

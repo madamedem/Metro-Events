@@ -4,6 +4,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views.generic import View
 from django.contrib import messages
+from django.http import HttpResponseRedirect, request
+
+
 
 
 from django.contrib.auth.models import auth
@@ -14,6 +17,13 @@ from .models import *
 
 
 # Create your views here.
+
+def destroy(request, id):  
+    Event = Event.objects.get(id=id)  
+    Event.delete()  
+
+    return redirect("organizer:organizer_events")
+
 
 class organizerIndexView(View):
     template_name="organizer-dashboard.html"
@@ -27,7 +37,19 @@ class organizerEventsView(View):
     template_name="organizer-events.html"
 
     def get(self,request):
-        return render(request,self.template_name, {})
+        events = Event.objects.all()
+        return render(request,self.template_name, {'event': events})
+
+    def post(self,request):
+        if request.method == "POST":
+            if 'btn_delete' in request.POST:  
+                event_id = request.POST.get('event_id')
+
+        del_event = Event.objects.filter(event_id = event_id)
+        del_event.delete()
+
+        return render("organizer-events.html")
+
 
 class organizerEventsAddView(View):
 
@@ -58,7 +80,11 @@ class organizerEventsAddView(View):
                  )
         event.save()
 
-        return render(request, "organizer:organizer_events.html", {'event': event})
+        context ={
+                'event': event
+        }
+
+        return render(request, "organizer-eventsAdd.html" , context)
 
 class organizerProfileView(View):
     template_name="organizer-profile.html"

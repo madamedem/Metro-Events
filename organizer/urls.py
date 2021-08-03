@@ -10,4 +10,6 @@ urlpatterns = [
     path('organizerReview', views.organizerReviewView.as_view(), name='organizer_review'),
     path('organizerProfile', views.organizerProfileView.as_view(), name='organizer_profile'),
 
+    path('delete/<int:id>', views.destroy),
 ]
+
