@@ -91,9 +91,9 @@
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Event ID</th>
-                                    <th scope="col">Event Status</th>
                                     <th scope="col">Event Name</th>
+                                    <th scope="col">Event Description</th>
+                                    <th scope="col">Event Type</th>
                                     <th scope="col">Start Date</th>
                                     <th scope="col">End Date</th>
                                     <th scope="col">Start Time</th>
@@ -101,9 +101,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for event in organizer_index %}
+                                {% for event in event %}
                                 <tr>
-                                    <th scope="row"><b>#122349</b></th>
                                     <td><b>{{ event.event_name }}</b></td>
                                     <td><b>{{ event.event_description}}</b></td>
                                     <td><b>{{ event.event_type }}</b></td>
@@ -116,6 +115,9 @@
                             </tbody>
                         </table>
                     </div>
+
+                      
+
           </div>
         </div>
       </div>
