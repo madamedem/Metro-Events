@@ -117,6 +117,7 @@
                     <td>1</td>
                     <td>
                       <form method="POST" class="post-form" action=""> 
+                        {% csrf_token %}
                         <button type="submit" class="btn">
                           <a href="" name="btn_delete" class="btn btn-danger"><i class="material-icons"></i> <span>Delete</span></a>
                         </button>
