@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect, request
 
 
 
+
 from django.contrib.auth.models import auth
 from django.contrib.auth import login, logout
 
@@ -48,7 +49,11 @@ class organizerEventsView(View):
         del_event = Event.objects.filter(event_id = event_id)
         del_event.delete()
 
-        return render("organizer-events.html")
+        context ={
+                'del_event': del_event
+        }
+
+        return render("organizer-events.html", context)
 
 
 class organizerEventsAddView(View):
