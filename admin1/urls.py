@@ -9,4 +9,5 @@ urlpatterns = [
     path('adminViewUserRequest', views.adminViewUserRequest.as_view(), name='admin_view'),
     path('adminAcceptRequest', views.adminAcceptRequest.as_view(), name='admin_accept'),
     path('adminDenyRequest', views.adminDenyRequest.as_view(), name='admin_deny'),
+    path('wwwView', views.wwwIndexView.as_view(), name='www_view'),
 ]

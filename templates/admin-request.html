@@ -16,6 +16,7 @@
 
 
         <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="{% static 'assets/css/admin-request.css' %}"/>
         <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}"/>
         <link rel="stylesheet" href="{% static 'assets/css/templatemo-plot-listing.css' %}"/>
         <link rel="stylesheet" href="{% static 'assets/css/animated.css' %}"/>
@@ -87,20 +88,22 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                  {% for admin2 in admin1 %}
                                     <tr>
-                                        <th scope="row"><b>User1235689</b></th>
+                                        <td><b>{{ admin1.userID }}</b></td>
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
+                                  {% endfor %}
                                     <tr>
                                         <th scope="row"><b>User4568937</b></th>
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -108,7 +111,7 @@
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -116,7 +119,7 @@
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -124,7 +127,7 @@
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
                                     <tr>
@@ -132,9 +135,10 @@
                                         <td> Good day! This user wants to request to become an organizer. </td>
                                         <td>
                                             <button type="button"> <a href="../admin1/adminViewUserRequest"> VIEW </a></button> |
-                                            <button type="button"> DELETE </button>
+                                            <button onclick="document.getElementById('id01').style.display='block'"> DELETE </button>
                                         </td>
                                     </tr>
+                                  
                                 </tbody>
                             </table>
                         </div>
@@ -143,6 +147,33 @@
             </div>
         </div>
     </div>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content" action="/action_page.php">
+          <div class="container">
+            <h1>Delete User Request</h1>
+            <p>Are you sure you want to delete this request?</p>
+          
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="deletebtn">Delete</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      
+      <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
 
 <br>
 

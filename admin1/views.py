@@ -38,3 +38,10 @@ class adminDenyRequest(View):
 
     def get(self,request):
         return render(request,self.template_name)
+
+
+class wwwIndexView(View):
+    template_name="www.html"
+
+    def get(self,request):
+        return render(request,self.template_name)
